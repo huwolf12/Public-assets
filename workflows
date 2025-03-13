@@ -1,0 +1,16 @@
+.github/workflows/ci.yml
+name: Mi primer Action  # Nombre del workflow
+
+on: [push]  # Se ejecuta cuando hay un "push" en el repositorio
+
+jobs:
+  build:  # Nombre del trabajo
+    runs-on: ubuntu-latest  # Se ejecutará en un entorno Linux
+    
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3  # Descarga el código del repositorio
+
+      - name: Ejecutar un comando simple
+        run: echo "¡GitHub Actions está funcionando!"
+
